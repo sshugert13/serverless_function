@@ -1,0 +1,6 @@
+packages:
+  - name: typeform-webhook
+    functions:
+      - name: __main__
+        runtime: 'python:3.11'
+        main: '__main__.py'

@@ -1,0 +1,18 @@
+[
+  {
+    "apihost": "https://faas-sfo3-7872a1dd.doserverless.co",
+    "namespace": "fn-93485118-3347-4277-bab4-5c9d23090ac7",
+    "packageVersions": {
+      "typeform-webhook": {
+        "version": "0.0.17",
+        "digest": "0ac94bf7af997b8f481bfc17f72146c7aa8c08a41e485542a23dd6a3c003ed66"
+      }
+    },
+    "actionVersions": {
+      "typeform-webhook/__main__": {
+        "version": "0.0.20",
+        "digest": "4b3749223ceb5d19d5c6f2f81c50b5f2fbed2279ebb6deb1c3994bc16eaccdd3"
+      }
+    }
+  }
+]
