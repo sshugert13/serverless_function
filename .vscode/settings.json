@@ -1,7 +1,7 @@
 {
-    "editor.fontSize": 16,
+    "editor.fontSize": 14,
     "editor.codeLensFontSize": 0,
     "editor.minimap.sectionHeaderFontSize": 9,
-    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.fontSize": 14,
     "chat.editor.fontSize": 18
 }
