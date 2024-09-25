@@ -1,3 +1,4 @@
 packages/typeform-webhook/config.py
 packages/typeform-webhook/virtualenv/
 venv/
+.env

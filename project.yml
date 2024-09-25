@@ -1,15 +1,28 @@
 packages:
   - name: typeform-webhook
-    functions:
-      - name: __main__
-        runtime: 'python:3.11'
-        main: '__main__.py'
+    actions:
+      - name: process_webhook
+        main: __main__.py
+        runtime: python:3.11
         environment:
           DB_USER: ${DB_USER}
           DB_PASSWORD: ${DB_PASSWORD}
           DB_HOST: ${DB_HOST}
-          DB_PORT: ${DB_PORT}
+          DB_PORT: "${DB_PORT}"
           DB_NAME: ${DB_NAME}
           ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY}
-        build:
-          - pip install -r requirements.txt --target virtualenv/lib/python3.11/site-packages
+  - name: shared
+    # Include shared package to be available for imports
+    actions:
+      - name: analysis
+        main: analysis.py
+        runtime: python:3.11
+      - name: config
+        main: config.py
+        runtime: python:3.11
+      - name: db_operations
+        main: db_operations.py
+        runtime: python:3.11
+      - name: prompts
+        main: prompts.py
+        runtime: python:3.11

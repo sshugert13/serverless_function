@@ -2,10 +2,14 @@
 import os
 import sys
 import json
+import asyncio
 
-# Add the virtual environment site-packages to the Python path
+# Add the virtual environment site-packages and shared directory to the Python path
 dir_path = os.path.dirname(os.path.realpath(__file__))
-sys.path.append(os.path.join(dir_path, "virtualenv/lib/python3.11/site-packages"))
+sys.path.extend([
+    os.path.join(dir_path, "virtualenv/lib/python3.11/site-packages"),
+    os.path.join(dir_path, "../shared")  # Adjusted path to shared directory
+])
 
 from db_operations import get_db_pool, store_user_response, store_analysis_results
 from analysis import get_anthropic_client, run_analysis
@@ -55,5 +59,4 @@ async def process_webhook(args):
 
 # DigitalOcean Functions entry point
 def main(args):
-    import asyncio
-    return asyncio.get_event_loop().run_until_complete(process_webhook(args))
+    return asyncio.run(process_webhook(args))

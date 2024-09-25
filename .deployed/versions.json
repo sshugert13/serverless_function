@@ -3,15 +3,35 @@
     "apihost": "https://faas-sfo3-7872a1dd.doserverless.co",
     "namespace": "fn-93485118-3347-4277-bab4-5c9d23090ac7",
     "packageVersions": {
+      "shared": {
+        "version": "0.0.2",
+        "digest": "992a80833cb06fb0832a89c61bbeb70f2e7be8f8711f138d2e1ad4951991a4e5"
+      },
       "typeform-webhook": {
-        "version": "0.0.17",
-        "digest": "0ac94bf7af997b8f481bfc17f72146c7aa8c08a41e485542a23dd6a3c003ed66"
+        "version": "0.0.25",
+        "digest": "b0049997320c37f42cfc1ea366c6a1aa67afd532700f05493931cb90cb033185"
       }
     },
     "actionVersions": {
+      "shared/analysis": {
+        "version": "0.0.2",
+        "digest": "36cb4e80d3fa6fb58473c34d8b3bb65acefee0fbbef7cc7d0e045aec0a91b598"
+      },
+      "shared/config": {
+        "version": "0.0.2",
+        "digest": "f780b5c86fd94b6719de73dc12f5c3c06328a9ee99f21d8cda8cd8172f04a8dd"
+      },
+      "shared/db_operations": {
+        "version": "0.0.2",
+        "digest": "f9caa06f5ce4c9ce874f06d28e86b278530dc7a07618d31f41e32728636e79fd"
+      },
+      "shared/prompts": {
+        "version": "0.0.2",
+        "digest": "bb40085722c97518a097c56d39dcaac04292d5494b0647107293e39db8e03372"
+      },
       "typeform-webhook/__main__": {
-        "version": "0.0.20",
-        "digest": "4b3749223ceb5d19d5c6f2f81c50b5f2fbed2279ebb6deb1c3994bc16eaccdd3"
+        "version": "0.0.29",
+        "digest": "438868001f82834a19516bf03a543ed592da0328f2ac092de12fc0b16e956743"
       }
     }
   }
