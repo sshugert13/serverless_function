@@ -1,9 +1,17 @@
+#!/usr/bin/env python
 import os
+import sys
 import json
+
+# Add the virtual environment site-packages to the Python path
+dir_path = os.path.dirname(os.path.realpath(__file__))
+sys.path.append(os.path.join(dir_path, "virtualenv/lib/python3.11/site-packages"))
+
 from db_operations import get_db_pool, store_user_response, store_analysis_results
 from analysis import get_anthropic_client, run_analysis
 
 async def process_webhook(args):
+    db_pool = None
     try:
         db_pool = await get_db_pool()
         anthropic_client = get_anthropic_client()
